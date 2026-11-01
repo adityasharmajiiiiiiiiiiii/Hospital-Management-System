@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MediCare HMS - Hospital Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-mark">+</span>
+      <div>
+        <strong>MediCare</strong>
+        <small>Hospital Management</small>
+      </div>
+    </div>
+    <nav id="nav">
+      <button data-view="dashboard" class="active">Dashboard</button>
+      <button data-view="patients">Patients</button>
+      <button data-view="doctors">Doctors</button>
+      <button data-view="appointments">Appointments</button>
+      <button data-view="bills">Billing</button>
+    </nav>
+    <div class="sidebar-foot" id="serverStatus">Connecting...</div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <h1 id="title">Dashboard</h1>
+      <div class="tools">
+        <input id="search" type="search" placeholder="Search records..." hidden>
+        <button id="addBtn" class="btn primary" hidden>+ Add</button>
+      </div>
+    </header>
+    <section id="content" class="content"></section>
+  </main>
+
+  <dialog id="modal">
+    <form id="form" autocomplete="off">
+      <h2 id="modalTitle"></h2>
+      <div id="formFields" class="form-grid"></div>
+      <p id="formError" class="form-error" hidden></p>
+      <div class="modal-actions">
+        <button type="button" class="btn" id="cancelBtn">Cancel</button>
+        <button type="submit" class="btn primary">Save</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>
